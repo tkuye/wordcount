@@ -1,0 +1,18 @@
+{% extends 'home.html' %}
+<title>Count</title>
+<body>
+    {% block content %}
+    <h2>There are {{ count }} words in your text.</h2>
+    <h2>Your text is:</h2>
+    {{fulltext}}
+    <h2 id="wordcount">Word Count</h2>
+    {% for word, num in worddictionary%}
+        <p> <ul><li><span>{{word}}</span> : {{num}}</li></ul>
+        
+    {% endfor %}
+</li>
+</p>
+   <form action="{% url 'home' %}" method="get"><input type="submit" value="Go home"></form>
+   {% endblock %}
+</body>
+</html>
